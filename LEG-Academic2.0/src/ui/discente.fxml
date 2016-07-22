@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <Pane prefHeight="306.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="377.0" fitWidth="555.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Sem%20Título-1.jpg" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="375.0" prefWidth="555.0" visible="false">
+               <children>
+                  <TextField layoutX="27.0" layoutY="136.0" prefHeight="90.0" prefWidth="495.0" promptText="Descrição da declaração">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="28.0" layoutY="84.0" prefHeight="25.0" prefWidth="494.0" promptText="Assunto da declaração">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="26.0" layoutY="14.0" text="Solicitar (Declaração)">
+                     <font>
+                        <Font name="Georgia" size="35.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="39.0" fitWidth="102.0" layoutX="418.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/button.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="418.0" layoutY="269.0" mnemonicParsing="false" opacity="0.1" prefHeight="37.0" prefWidth="103.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="376.0" prefWidth="555.0" visible="false">
+               <children>
+                  <TextField layoutX="28.0" layoutY="147.0" prefHeight="89.0" prefWidth="493.0" promptText="Descrição do processo">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="28.0" layoutY="71.0" prefHeight="25.0" prefWidth="493.0" promptText="Assunto do processo">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="28.0" layoutY="109.0" prefHeight="25.0" prefWidth="494.0" promptText="Tipo do processo">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="27.0" layoutY="13.0" text="Abertura (Processos)">
+                     <font>
+                        <Font name="Georgia" size="35.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="100.0" layoutX="419.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/button.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="419.0" layoutY="270.0" mnemonicParsing="false" opacity="0.1" prefHeight="35.0" prefWidth="101.0" />
+               </children>
+            </Pane>
+            <TableView layoutY="-1.0" prefHeight="377.0" prefWidth="555.0" visible="false">
+              <columns>
+                <TableColumn prefWidth="82.0" text="Nº" />
+                <TableColumn prefWidth="102.0" text="Data do pedido" />
+                  <TableColumn prefWidth="103.0" text="Matrícula" />
+                  <TableColumn prefWidth="267.0" text="Descriçao" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Processo">
+            <items>
+              <MenuItem fx:id="dadosButt" mnemonicParsing="false" onAction="#dadosShow" text="Abrir" />
+                  <MenuItem fx:id="sairButt" mnemonicParsing="false" text="Meus Processos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Declaração">
+            <items>
+              <MenuItem fx:id="solicitarProcButt" mnemonicParsing="false" text="Solicitar" />
+                  <MenuItem fx:id="checarProcButt" mnemonicParsing="false" text="Minhas declarações" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="...">
+            <items>
+              <MenuItem fx:id="solicitarDecButt" mnemonicParsing="false" text="Sair" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Usuários">
+            <items>
+              <MenuItem fx:id="userCriarButt" mnemonicParsing="false" text="Criar Aluno" />
+                  <MenuItem mnemonicParsing="false" text="Criar Servidor" />
+                  <MenuItem fx:id="userAlterButt" mnemonicParsing="false" text="Alterar Aluno" />
+                  <MenuItem mnemonicParsing="false" text="Alterar Servidor" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+              <MenuItem fx:id="checRecProcButt" mnemonicParsing="false" onAction="#ChecarRecentes" text="Checar recentes" />
+                  <MenuItem fx:id="atualProcButt" mnemonicParsing="false" text="Atualizar status" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Declarações">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Checar recentes" />
+                  <MenuItem mnemonicParsing="false" text="Atualizar status" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutY="1.0" prefHeight="375.0" prefWidth="600.0" visible="false">
+               <children>
+                  <TextField layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="569.0" promptText="Nome" />
+                  <TextField layoutX="14.0" layoutY="68.0" prefHeight="25.0" prefWidth="569.0" promptText="ID Curso" />
+                  <TextField layoutX="13.0" layoutY="111.0" prefHeight="25.0" prefWidth="571.0" promptText="Semestre" />
+                  <Button layoutX="490.0" layoutY="163.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="93.0" text="Submeter" />
+               </children>
+            </Pane>
+            <Pane prefHeight="379.0" prefWidth="600.0" visible="false">
+               <children>
+                  <TextField layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="572.0" promptText="Nome" />
+                  <TextField layoutX="14.0" layoutY="68.0" prefHeight="25.0" prefWidth="572.0" promptText="ID Cargo" />
+                  <TextField layoutX="14.0" layoutY="102.0" prefHeight="25.0" prefWidth="572.0" promptText="Carga Horária" />
+                  <TextField layoutX="14.0" layoutY="140.0" prefHeight="25.0" prefWidth="573.0" promptText="Grau" />
+                  <CheckBox layoutX="14.0" layoutY="181.0" mnemonicParsing="false" text="Discente" />
+                  <Button layoutX="488.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="98.0" text="Submeter" />
+               </children>
+            </Pane>
+            <Pane prefHeight="375.0" prefWidth="600.0" visible="false">
+               <children>
+                  <TextField layoutX="13.0" layoutY="69.0" prefHeight="25.0" prefWidth="569.0" promptText="Nome" />
+                  <TextField layoutX="13.0" layoutY="104.0" prefHeight="25.0" prefWidth="569.0" promptText="ID Curso" />
+                  <TextField layoutX="13.0" layoutY="145.0" prefHeight="25.0" prefWidth="571.0" promptText="Semestre" />
+                  <Button layoutX="490.0" layoutY="203.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="93.0" text="Submeter" />
+                  <TextField layoutX="13.0" layoutY="31.0" prefHeight="25.0" prefWidth="570.0" promptText="ID Aluno" />
+               </children>
+            </Pane>
+            <Pane layoutY="-2.0" prefHeight="379.0" prefWidth="600.0" visible="false">
+               <children>
+                  <TextField layoutX="14.0" layoutY="66.0" prefHeight="25.0" prefWidth="572.0" promptText="Nome" />
+                  <TextField layoutX="14.0" layoutY="103.0" prefHeight="25.0" prefWidth="572.0" promptText="ID Cargo" />
+                  <TextField layoutX="15.0" layoutY="137.0" prefHeight="25.0" prefWidth="572.0" promptText="Carga Horária" />
+                  <TextField layoutX="14.0" layoutY="177.0" prefHeight="25.0" prefWidth="573.0" promptText="Grau" />
+                  <CheckBox layoutX="14.0" layoutY="215.0" mnemonicParsing="false" text="Discente" />
+                  <Button layoutX="489.0" layoutY="255.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="98.0" text="Submeter" />
+                  <TextField layoutX="15.0" layoutY="28.0" prefHeight="25.0" prefWidth="569.0" promptText="ID Servidor" />
+               </children>
+            </Pane>
+            <TableView fx:id="tableRecProc" layoutY="-1.0" onMouseDragEntered="#MostrarDesc" prefHeight="376.0" prefWidth="600.0" visible="false">
+              <columns>
+                <TableColumn prefWidth="89.0" text="Nº Processo" />
+                  <TableColumn minWidth="0.0" prefWidth="78.0" text="Matrícula" />
+                  <TableColumn prefWidth="119.0" text="Data Pedido" />
+                  <TableColumn prefWidth="313.0" text="Descrição" />
+              </columns>
+            </TableView>
+            <Pane prefHeight="377.0" prefWidth="600.0" visible="false">
+               <children>
+                  <TextField layoutX="13.0" layoutY="38.0" prefHeight="25.0" prefWidth="575.0" promptText="ID Processo" />
+                  <TextField layoutX="13.0" layoutY="81.0" prefHeight="25.0" prefWidth="576.0" promptText="Novo Status" />
+                  <Button layoutX="476.0" layoutY="164.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" text="Submeter" />
+               </children>
+            </Pane>
+            <TableView fx:id="tableRecProc1" onMouseDragEntered="#MostrarDesc" prefHeight="375.0" prefWidth="600.0" visible="false">
+               <columns>
+                  <TableColumn prefWidth="89.0" text="Nº Declaração" />
+                  <TableColumn minWidth="0.0" prefWidth="78.0" text="Matrícula" />
+                  <TableColumn prefWidth="119.0" text="Data Pedido" />
+                  <TableColumn prefWidth="313.0" text="Descrição" />
+               </columns>
+            </TableView>
+            <Pane prefHeight="377.0" prefWidth="600.0" visible="false">
+               <children>
+                  <TextField layoutX="13.0" layoutY="38.0" prefHeight="25.0" prefWidth="575.0" promptText="ID Declaração" />
+                  <TextField layoutX="13.0" layoutY="81.0" prefHeight="25.0" prefWidth="576.0" promptText="Novo Status" />
+                  <Button layoutX="476.0" layoutY="164.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" text="Submeter" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
